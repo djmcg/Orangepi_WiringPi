@@ -102,7 +102,7 @@ The Open source project of WiringPi on OrangePi. maintain from www.orangepi.org
       * Gpio watch readall
       Use command `watch -n 0.1 gpio readall `
                    
-                ``````  Every 0.1s: gpio readall                               orangepiwin: Wed Dec 25 17:24:14 2019
+                ``````  Every 0.1s: gpio readall                            
 ```
  +-----+-----+----------+------+---+-Orange Pi Win/Win+ +---+---+------+---------+-----+--+
  | BCM | wPi |   Name   | Mode | V | Physical | V | Mode | Name     | wPi | BCM |
