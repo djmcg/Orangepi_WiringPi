@@ -99,3 +99,39 @@ The Open source project of WiringPi on OrangePi. maintain from www.orangepi.org
        | BCM | wPi |   Name   | Mode | V | Physical | V | Mode | Name     | wPi | BCM |
        +-----+-----+----------+------+---+--OrangePi+------+----------+-----+-----+
       ```
+      * Gpio watch readall
+      Use command `watch -n 0.1 gpio readall `
+                   
+                  Every 0.1s: gpio readall                               orangepiwin: Wed Dec 25 17:24:14 2019
+
+ +-----+-----+----------+------+---+-Orange Pi Win/Win+ +---+---+------+---------+-----+--+
+ | BCM | wPi |   Name   | Mode | V | Physical | V | Mode | Name     | wPi | BCM |
+ +-----+-----+----------+------+---+----++----+---+------+----------+-----+-----+
+ |     |     |     3.3v |      |   |  1 || 2  |   |      | 5v       |     |     |
+ | 227 |   8 |    SDA.1 |   IN | 0 |  3 || 4  |   |      | 5V       |     |     |
+ | 226 |   9 |    SCL.1 |   IN | 0 |  5 || 6  |   |      | 0v       |     |     |
+ | 362 |   7 |   GPIO.7 |   IN | 0 |  7 || 8  | 0 | OUT  | S_TX     | 15  | 354 |
+ |     |     |       0v |      |   |  9 || 10 | 0 | OUT  | S_RX     | 16  | 355 |
+ | 229 |   0 |     RxD3 |   IN | 0 | 11 || 12 | 0 | OUT  | GPIO.1   | 1   | 100 |
+ | 228 |   2 |     TxD3 |   IN | 0 | 13 || 14 |   |      | 0v       |     |     |
+ | 231 |   3 |     CTS3 |   IN | 0 | 15 || 16 | 0 | IN   | GPIO.4   | 4   | 361 |
+ |     |     |     3.3v |      |   | 17 || 18 | 0 | IN   | GPIO.5   | 5   | 68  |
+ |  98 |  12 |     MOSI |   IN | 0 | 19 || 20 |   |      | 0v       |     |     |
+ |  99 |  13 |     MISO |   IN | 0 | 21 || 22 | 0 | IN   | RTS3     | 6   | 230 |
+ |  97 |  14 |     SCLK |   IN | 0 | 23 || 24 | 0 | IN   | CE0      | 10  | 96  |
+ |     |     |       0v |      |   | 25 || 26 | 0 | IN   | GPIO.11  | 11  | 102 |
+ | 143 |  30 |    SDA.2 |   IN | 0 | 27 || 28 | 0 | IN   | SCL.2    | 31  | 142 |
+ |  36 |  21 |  GPIO.21 |   IN | 0 | 29 || 30 |   |      | 0v       |     |     |
+ |  37 |  22 |  GPIO.22 |   IN | 0 | 31 || 32 | 0 | IN   | RTS2     | 26  | 34  |
+ |  38 |  23 |  GPIO.23 |   IN | 0 | 33 || 34 |   |      | 0v       |     |     |
+ |  39 |  24 |  GPIO.24 |   IN | 0 | 35 || 36 | 0 | IN   | CTS2     | 27  | 35  |
+ | 101 |  25 |  GPIO.25 |   IN | 0 | 37 || 38 | 0 | IN   | TxD2     | 28  | 32  |
+ |     |     |       0v |      |   | 39 || 40 | 0 | IN   | RxD2     | 29  | 33  |
+ +-----+-----+----------+------+---+----++----+---+------+----------+-----+-----+
+ | BCM | wPi |   Name   | Mode | V | Physical | V | Mode | Name     | wPi | BCM |
+ +-----+-----+----------+------+---+-Orange Pi Win/Win+ +---+------+----------+-----+-----+
+ 
+ Or
+ Use command `watch -n 0.1 cat /sys/kernel/debug/gpio `
+
+ 
